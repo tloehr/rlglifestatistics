@@ -1,4 +1,13 @@
-<h3><?php echo $game['flagname']; ?></h3>
+//     ___   ____ _____ _____ _        _    ____
+//    / _ \ / ___|  ___|  ___| |      / \  / ___|
+//   | | | | |   | |_  | |_  | |     / _ \| |  _
+//   | |_| | |___|  _| |  _| | |___ / ___ \ |_| |
+//    \___/ \____|_|   |_|   |_____/_/   \_\____|
+//
+<?php require("../index-head.php"); ?>
+<?php require $_GET["gamefile"]; ?>
+
+<h1><?php echo $game['flagname']; ?></h1>
 <p>Letzte Aktualisierung: <?php echo $game['timestamp']; ?></p>
 <p><b>Match Nr. <?php echo $game['matchid']; ?></b> &nbsp; <b>Spielbeginn:</b> <?php echo $game['ts_game_started']; ?>
     <?php if ($game['ts_game_ended'] != 'null') {
@@ -7,8 +16,8 @@
     ?>
 </p>
 
-<h4>Aktueller Spielstand</h4>
-
+<h2>Spielstand</h2>
+ 
 <?php
 
 $collapseref = "collapse" . rand();
@@ -60,25 +69,6 @@ if ($game['ts_game_ended'] == 'null') {
 }
 ?>
 
-<!--  old table style
-
-<table class="table" style="width:100%">
-    <tr>
-        <th style="font-size:125%;font-weight:bold;text-align:center"><?php echo $lang['REMAINING'] ?></th>
-        <th style="font-size:125%;font-weight:bold;text-align:center"><?php echo $lang['TEAM_RED'] ?></th>
-        <th style="font-size:125%;font-weight:bold;text-align:center"><?php echo $lang['TEAM_BLUE'] ?></th>
-        <th style="font-size:125%;font-weight:bold;text-align:center"><?php echo(intval($game['num_teams']) >= 3 ? $lang['TEAM_GREEN'] : '<s>' . $lang['TEAM_GREEN'] . '</s>') ?></th>
-        <th style="font-size:125%;font-weight:bold;text-align:center"><?php echo(intval($game['num_teams']) >= 4 ? $lang['TEAM_YELLOW'] : '<s>' . $lang['TEAM_YELLOW'] . '</s>') ?></th>
-    </tr>
-    <tr>
-        <td style="font-size:175%;font-weight:bold;text-align:center"><?php echo $game['time']; ?></td>
-        <td style="font-size:175%;color:red;font-weight:bold;text-align:center"><?php echo $game['rank']['red']; ?></td>
-        <td style="font-size:175%;color:royalblue;font-weight:bold;text-align:center"><?php echo $game['rank']['blue']; ?></td>
-        <td style="font-size:175%;color:green;font-weight:bold;text-align:center"><?php echo(intval($game['num_teams']) >= 3 ? $game['rank']['green'] : '--'); ?></td>
-        <td style="font-size:175%;color:black;background:yellow;font-weight:bold;text-align:center"><?php echo(intval($game['num_teams']) >= 4 ? $game['rank']['yellow'] : '--'); ?></td>
-    </tr>
-</table>
--->
 
 <table class="table" style="width:100%">
     <tr>
@@ -135,3 +125,5 @@ if ($game['ts_game_ended'] == 'null') {
         </div>
     </div>
 </div>
+
+<?php require("../index-foot.php"); ?>

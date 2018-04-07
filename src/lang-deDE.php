@@ -1,17 +1,23 @@
 <?php
+// Site Titles
+$lang['SITE_TITLE'] = 'Flashheart\'s RLG';
+$lang['SITE_BASE_URL'] = 'https://flashheart.de/rlg';
+$lang['SITE_AUTOREFRESH'] = 'Alle 10 Sekunden aktualisieren';
+$lang['NO_GAMES_RUNNING'] = 'Im Moment laufen keine Spiele, guck ins <a href="https://flashheart.de/rlg/index-archive.php">Archiv</a>.';
 // Common
 $lang['EVENT_PAUSE'] = 'Spiel befindet sich im Timeout (Pause)';
 $lang['EVENT_RESUME'] = 'Spiel läuft wieder';
 $lang['EVENT_START_GAME'] = 'Spiel hat begonnen';
 $lang['EVENT_GAME_OVER'] = 'Das Spiel ist vorbei';
 $lang['EVENT_GAME_ABORTED'] = 'Spiel wurde abgebrochen';
-$lang['NO_GAMES_RUNNING'] = 'Im Moment laufen keine Spiele, guck ins <a href="https://flashheart.de/rlg/index-archive.php">Archiv</a>.';
 $lang['EMPTY_ARCHIVE'] = 'Das Archiv ist leer';
 $lang['EVENT_QUIT_PROGRAM'] = 'Das Programm wurde beendet';
 $lang['REMAINING'] = 'Restliche Spielzeit';
+$lang['STARTIME'] = 'Spielbeginn';
 $lang['TITLE'] = 'Titel';
 $lang['TIME'] = 'Zeit';
-$lang['MAXGAMETIME'] = 'Gesamtspieltzeit';
+$lang['MAXGAMETIME'] = 'Gesamtspielzeit';
+$lang['MAXGAMETIME'] = 'Gesamtspielzeit';
 $lang['OVERTIME'] = 'Nachspielzeit';
 $lang['WON_THE_GAME'] = 'haben das Spiel gewonnen';
 $lang['EVENT_OVERTIME'] = 'Nachspielzeit hat begonnen';
@@ -39,5 +45,5 @@ $lang['EVENT_BOMB_FUSED'] = 'Bombe ist scharf';
 $lang['EVENT_BOMB_DEFUSED'] = 'Bombe wurde entschärft';
 $lang['EVENT_BOMB_DEFENDED'] = 'Bombe wurde erfolgreich verteidigt';
 $lang['EVENT_BOMB_EXPLODED'] = 'Bombe ist explodiert';
-$lang['MAX_BOMB_TIMER'] = 'Maximale Zeit bis zur Explosion';
+$lang['MAX_BOMB_TIMER'] = 'Explosionszeit';
 ?>
