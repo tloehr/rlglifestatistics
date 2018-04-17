@@ -40,10 +40,10 @@ $lang['TEAM_YELLOW'] = 'Team Gelb';
 // MissionBox
 $lang['ATTACKER'] = 'Angreifer';
 $lang['DEFENDER'] = 'Verteidiger';
-$lang['EVENT_BOMB_ACTIVE'] = 'Bombe ist spielbereit';
-$lang['EVENT_BOMB_FUSED'] = 'Bombe ist scharf';
-$lang['EVENT_BOMB_DEFUSED'] = 'Bombe wurde entschärft';
-$lang['EVENT_BOMB_DEFENDED'] = 'Bombe wurde erfolgreich verteidigt';
-$lang['EVENT_BOMB_EXPLODED'] = 'Bombe ist explodiert';
+$lang['FLAGACTV'] = 'Bombe ist spielbereit';
+$lang['FLAG_HOT'] = 'Bombe ist scharf';
+$lang['FLAGCOLD'] = 'Bombe ist nicht scharf';
+$lang['FLAGDFND'] = 'Bombe wurde erfolgreich verteidigt';
+$lang['FLAGTAKN'] = 'Bombe ist explodiert';
 $lang['MAX_BOMB_TIMER'] = 'Explosionszeit';
 ?>
