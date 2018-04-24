@@ -39,9 +39,9 @@ if ($game['winner'] == 'notdecidedyet') {
     }
 
     if ($game['bombfused'] == 'false') {
-        echo '<div class="well" style="font-size:175%;background:green;color:white;font-weight:bold">' . $string_pause . $lang['FLAGCOLD'] . '</div>';
+        echo '<div class="well" style="font-size:175%;background:green;color:white;font-weight:bold">' . $string_pause . $lang['FLAGCOLD'] . ' - ' . $lang['DEFENDED_IN'] . ' ' . $game['remaining'] . '</div>';
     } elseif ($game['bombfused'] == 'true') {
-        echo '<div class="well" style="font-size:175%;background:red;color:yellow;font-weight:bold">' . $string_pause . $lang['FLAG_HOT'] . '</div>';
+        echo '<div class="well" style="font-size:175%;background:red;color:yellow;font-weight:bold">' . $string_pause . $lang['FLAG_HOT'] . ' - ' . $lang['EXPLODING_IN'] . ' ' . $game['remaining'] . '</div>';
     } else {
         echo '<div class="well" style="font-size:175%;background:black;color:white;font-weight:bold">ERROR</div>';
     }

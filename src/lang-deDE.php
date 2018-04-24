@@ -45,5 +45,7 @@ $lang['FLAG_HOT'] = 'Bombe ist scharf';
 $lang['FLAGCOLD'] = 'Bombe ist nicht scharf';
 $lang['FLAGDFND'] = 'Bombe wurde erfolgreich verteidigt';
 $lang['FLAGTAKN'] = 'Bombe ist explodiert';
+$lang['EXPLODING_IN'] = 'Explosion in: ';
+$lang['DEFENDED_IN'] = 'Verteidigt in:';
 $lang['MAX_BOMB_TIMER'] = 'Explosionszeit';
 ?>
