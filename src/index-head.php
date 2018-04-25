@@ -73,6 +73,10 @@
         </h1>
     </div>
 
+    <input type="checkbox" onclick="toggleAutoRefresh(this);" id="reloadCB"> Auto Refresh alle 10 Sekunden
+
+
+
 <!---->
 <!--    <div class="[ form-group ]">-->
 <!--        <input type="checkbox" name="fancy-checkbox-primary" onclick="toggleAutoRefresh(this);"-->
