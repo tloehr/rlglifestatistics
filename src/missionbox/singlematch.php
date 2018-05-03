@@ -33,26 +33,44 @@ $collapseref = "collapse" . rand();
 
 if ($game['winner'] == 'notdecidedyet') {
     $string_pause = "";
+}
 
-    if ($game['ts_game_paused'] != 'null') {
-        $string_pause = 'AUSZEIT/PAUSE seit ' . $game['ts_game_paused'] . ' &rarr; ';
-    }
+if ($game['ts_game_paused'] != 'null') {
+    $string_pause = 'AUSZEIT/PAUSE seit ' . $game['ts_game_paused'] . ' &rarr; ';
+}
 
+if ($game['winner'] == 'notdecidedyet') {
     if ($game['bombfused'] == 'false') {
         echo '<div class="well" style="font-size:175%;background:green;color:white;font-weight:bold">' . $string_pause . $lang['FLAGCOLD'] . ' - ' . $lang['DEFENDED_IN'] . ' ' . $game['remaining'] . '</div>';
-    } elseif ($game['bombfused'] == 'true') {
-        echo '<div class="well" style="font-size:175%;background:red;color:yellow;font-weight:bold">' . $string_pause . $lang['FLAG_HOT'] . ' - ' . $lang['EXPLODING_IN'] . ' ' . $game['remaining'] . '</div>';
     } else {
-        echo '<div class="well" style="font-size:175%;background:black;color:white;font-weight:bold">ERROR</div>';
+        echo '<div class="well" style="font-size:175%;background:red;color:yellow;font-weight:bold">' . $string_pause . $lang['FLAG_HOT'] . ' - ' . $lang['EXPLODING_IN'] . ' ' . $game['remaining'];
+        if ($game['overtime'] != '--') {
+            echo "&nbsp;&rArr;" . $lang['OVERTIME'] . "&nbsp;+" . $game['overtime'];
+        }
+        echo '</div>';
     }
 }
 
 if ($game['winner'] == 'attacker') {
-    echo '<div class="well" style="font-size:175%;background:red;color:white;font-weight:bold">' . $lang['ATTACKER'] . " " . $lang['WON_THE_GAME'] . '</div>';
+    echo '<div class="well" style="font-size:175%;background:red;color:white;font-weight:bold">';
+    echo $lang['ATTACKER'] . " " . $lang['WON_THE_GAME'];
+
+    if ($game['overtime'] != '--') {
+        echo "&nbsp;&rArr;" . $lang['OVERTIME'] . "&nbsp;+" . $game['overtime'];
+    }
+
+    echo '</div>';
 }
 
 if ($game['winner'] == 'defender') {
-    echo '<div class="well" style="font-size:175%;background:green;color:yellow;font-weight:bold">' . $lang['DEFENDER'] . " " . $lang['WON_THE_GAME'] . '</div>';
+    echo '<div class="well" style="font-size:175%;background:green;color:yellow;font-weight:bold">';
+    echo $lang['DEFENDER'] . " " . $lang['WON_THE_GAME'];
+
+    if ($game['overtime'] != '--') {
+        echo "&nbsp;&rArr;" . $lang['EVENT_SUDDEN_DEATH'] . "&nbsp;+" . $game['overtime'];
+    }
+
+    echo '</div>';
 }
 
 ?>
