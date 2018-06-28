@@ -73,7 +73,7 @@ if ($game['ts_game_ended'] == 'null') {
 <table class="table" style="width:100%">
     <tr>
         <th style="font-size:125%;font-weight:bold;text-align:center"><?php echo $lang['TITLE'] ?></th>
-        <th style="font-size:125%;font-weight:bold;text-align:center"><?php echo $lang['TIME'] ?></th>
+        <th style="font-size:125%;font-weight:bold;text-align:center"><?php echo $lang['GAMETIME'] ?></th>
     </tr>
     <tr>
         <th style="font-size:125%;font-weight:bold;text-align:left"><?php echo $lang['REMAINING'] ?></th>
@@ -111,12 +111,13 @@ if ($game['ts_game_ended'] == 'null') {
             <div class="panel-body">
                 <table class="table">
                     <tr>
-                        <th>Zeitpunkt</th>
-                        <th>Ereignis</th>
+                        <th><?php echo $lang['TIME'] ?></th>
+                        <th><?php echo $lang['REMAINING'] ?></th>
+                        <th><?php echo $lang['EVENT'] ?></th>
                     </tr>
                     <?php
                     foreach ($game['events'] AS $myevent) {
-                        echo "<tr><td>" . $myevent['pit'] . "</td><td>" . $lang[$myevent['event']] . "</td></tr>";
+                        echo "<tr><td>" . $myevent['pit'] . "</td><td>" . $myevent['humantime'] . "</td><td>" . $lang[$myevent['event']] . "</td></tr>";
                     }
                     ?>
                 </table>

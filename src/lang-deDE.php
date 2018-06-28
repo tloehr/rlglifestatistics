@@ -5,6 +5,7 @@ $lang['SITE_BASE_URL'] = 'https://flashheart.de/rlg';
 $lang['SITE_AUTOREFRESH'] = 'Alle 10 Sekunden aktualisieren';
 $lang['NO_GAMES_RUNNING'] = 'Im Moment laufen keine Spiele, guck ins <a href="https://flashheart.de/rlg/index-archive.php">Archiv</a>.';
 // Common
+$lang['EVENT'] = 'Ereignis';
 $lang['EVENT_PAUSE'] = 'Spiel befindet sich im Timeout (Pause)';
 $lang['EVENT_RESUME'] = 'Spiel läuft wieder';
 $lang['EVENT_START_GAME'] = 'Spiel hat begonnen';
@@ -15,7 +16,8 @@ $lang['EVENT_QUIT_PROGRAM'] = 'Das Programm wurde beendet';
 $lang['REMAINING'] = 'Restliche Spielzeit';
 $lang['STARTIME'] = 'Spielbeginn';
 $lang['TITLE'] = 'Titel';
-$lang['TIME'] = 'Zeit';
+$lang['TIME'] = 'Uhrzeit';
+$lang['GAMETIME'] = 'Spielzeit';
 $lang['MAXGAMETIME'] = 'Gesamtspielzeit';
 $lang['MAXGAMETIME'] = 'Gesamtspielzeit';
 $lang['OVERTIME'] = 'Nachspielzeit';
